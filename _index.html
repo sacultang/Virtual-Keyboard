@@ -10,12 +10,11 @@
 
       <%= htmlWebpackPlugin.options.title %>
     </title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="./src/css/_style.css">
   </head>
 
   <body>
-    <div class="container">
-      <!-- menu -->
+    <div class="container" id="container">
       <div class="menu">
         <label class="switch">
           <input id="switch" type="checkbox">
@@ -23,7 +22,7 @@
         </label>
         <div class="select-box">
           <label for="font">Font:</label>
-          <select name="" id="font">
+          <select id="font">
             <option value="" disabled selected>Choose Font</option>
             <option value="Comic Sans MS, Comic Sans, cursive">Font 1</option>
             <option value="Arial Narrow, sans-serif">Font 2</option>
@@ -31,17 +30,13 @@
           </select>
         </div>
       </div>
-      <!-- input -->
-      <div class="input-group">
-        <input type="text" autocomplete="off" placeholder="some text..."
-          id="input" class="input">
+      <div class="input-group" id="input-group">
+        <input id="input" class="input" type="text" autocomplete="off">
         <div class="error-message">한글 입력 불가</div>
       </div>
-      <!-- Keyboard -->
       <div class="keyboard" id="keyboard">
-        <!-- row 1 -->
         <div class="row">
-          <div class="key" data-code="BackQuote" data-val="`">
+          <div class="key" data-code="Backquote" data-val="`">
             <span class="two-value">~</span>
             <span class="two-value">`</span>
           </div>
@@ -85,7 +80,6 @@
             <span class="two-value">)</span>
             <span class="two-value">0</span>
           </div>
-
           <div class="key" data-code="Minus" data-val="-">
             <span class="two-value">_</span>
             <span class="two-value">-</span>
@@ -99,7 +93,6 @@
             Backspace
           </div>
         </div>
-        <!-- row 2 -->
         <div class="row">
           <div class="key tab-key">Tab</div>
           <div class="key" data-code="KeyQ" data-val="q">Q</div>
@@ -125,7 +118,6 @@
             <span class="two-value">\</span>
           </div>
         </div>
-        <!-- row 3 -->
         <div class="row">
           <div class="key caps-lock-key">CapsLock</div>
           <div class="key" data-code="KeyA" data-val="a">A</div>
@@ -147,7 +139,6 @@
           </div>
           <div class="key enter-key" data-code="Enter">Enter</div>
         </div>
-        <!-- row 4 -->
         <div class="row">
           <div class="key left-shift-key" data-code="ShiftLeft">Shift</div>
           <div class="key" data-code="KeyZ" data-val="z">Z</div>
@@ -175,7 +166,6 @@
           </div>
           <div class="key right-shift-key" data-code="ShiftRight">Shift</div>
         </div>
-        <!-- row 5 -->
         <div class="row">
           <div class="key fn-key">Ctrl</div>
           <div class="key fn-key">-</div>
@@ -188,7 +178,7 @@
           <div class="key fn-key">Ctrl</div>
         </div>
       </div>
-    </div>
+
     </div>
   </body>
 

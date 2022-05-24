@@ -8,24 +8,108 @@ html[theme='dark-mode'] {
   filter: invert(100%) hue-rotate(180deg);
 }
 
+body {
+  background-color: white;
+}
+
 .container {
   width: 1050px;
   margin: auto;
 }
 
-.menu {
+.keyboard {
+  background-color: gray;
+  color: gray;
+  width: 1050px;
+  border-radius: 4px;
+}
+
+.row {
+  /* ! */
   display: flex;
 }
 
-/* Input switch */
+.key {
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  /* ! */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  transition: 0.2s;
+  /* ! */
+}
+
+.key:hover {
+  background-color: lightgray;
+}
+
+.key.active {
+  background-color: #333;
+  color: #fff;
+}
+
+.key .two-value {
+  width: 100%;
+  text-align: center;
+}
+
+.fn-key {
+  width: 80px;
+}
+
+.space-key {
+  width: 420px;
+}
+
+.back-space-key {
+  width: 130px;
+}
+
+.tab-key {
+  width: 95px;
+}
+
+.back-slash-key {
+  width: 95px;
+}
+
+.caps-lock-key {
+  width: 110px;
+}
+
+.left-shift-key {
+  width: 145px;
+}
+
+.enter-key {
+  width: 150px;
+}
+
+.right-shift-key {
+  width: 185px;
+}
+
+.menu {
+  /* ! */
+  display: flex;
+}
+
 .switch {
   position: relative;
   width: 60px;
   height: 34px;
 }
+
 .switch input {
   display: none;
 }
+
 .slider {
   top: 0;
   left: 0;
@@ -33,10 +117,12 @@ html[theme='dark-mode'] {
   bottom: 0;
   position: absolute;
   cursor: pointer;
-  background-color: #c6c6c6;
+  background-color: gray;
   border-radius: 34px;
-  transform: 0.4s;
+  transition: 0.4s;
 }
+
+/* ! */
 .slider::before {
   position: absolute;
   content: '';
@@ -52,7 +138,9 @@ html[theme='dark-mode'] {
 input:checked + .slider {
   background-color: black;
 }
+
 input:checked + .slider::before {
+  /* ! */
   transform: translateX(26px);
 }
 
@@ -63,13 +151,14 @@ input:checked + .slider::before {
 }
 
 .select-box select {
+  /* ! */
   font-size: 0.9rem;
+  /* ! */
   padding: 2px 5px;
   height: 34px;
   width: 200px;
 }
 
-/* text Input */
 .input-group {
   margin: 100px 0px;
 }
@@ -77,15 +166,13 @@ input:checked + .slider::before {
 .input {
   border: none;
   border-bottom: 2px solid lightgrey;
-  width: 100%;
+  width: 1050px;
   height: 50px;
   font-size: 30px;
   text-align: center;
   display: block;
 }
-.input::placeholder {
-  color: #c6c6c6;
-}
+
 .error-message {
   color: #cc0033;
   font-size: 30px;
@@ -93,73 +180,15 @@ input:checked + .slider::before {
   margin-top: 10px;
   text-align: center;
 }
+
 .input-group .error-message {
   display: none;
 }
 
-/* keyboard */
-
-.keyboard {
-  background-color: gray;
-  color: gray;
-  width: 100%;
-  border-radius: 4px;
-}
-.row {
-  display: flex;
-}
-.key {
-  width: 60px;
-  height: 60px;
-  margin: 5px;
-  border-radius: 4px;
-  background-color: white;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  transition: 0.2s;
+.error input {
+  border-bottom: 2px solid red;
 }
 
-.key:hover {
-  background-color: lightgray;
-}
-
-.key.active {
-  background-color: #333;
-  color: #fff;
-}
-.key .two-value {
-  width: 100%;
-  text-align: center;
-}
-.fn-key {
-  width: 80px;
-}
-.space-key {
-  width: 420px;
-}
-.back-space-key {
-  width: 130px;
-}
-.tab-key {
-  width: 95px;
-}
-.back-slash-key {
-  width: 95px;
-}
-.caps-lock-key {
-  width: 110px;
-}
-
-.left-shift-key {
-  width: 145px;
-}
-
-.enter-key {
-  width: 150px;
-}
-.right-shift-key {
-  width: 185px;
+.error .error-message {
+  display: block;
 }
