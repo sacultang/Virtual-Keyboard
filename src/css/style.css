@@ -7,7 +7,9 @@ html[theme='dark-mode'] {
   /* ! */
   filter: invert(100%) hue-rotate(180deg);
 }
-
+body {
+  background-color: white;
+}
 .container {
   width: 1050px;
   margin: auto;
@@ -55,7 +57,6 @@ input:checked + .slider {
 input:checked + .slider::before {
   transform: translateX(26px);
 }
-
 .select-box {
   position: relative;
   margin-left: 60px;
